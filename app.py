@@ -33,7 +33,7 @@ def iris_prediction(sepal_length, sepal_width, petal_length, petal_width):
 
 @app.route('/', methods=['GET'])
 def index():
-    return 'Hello, world!'
+    return 'Test, world!'
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -47,3 +47,4 @@ def predict():
 
     # Return the result as a string with JSON format
     return json.dumps(result)
+
