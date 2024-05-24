@@ -1,5 +1,7 @@
 # Flask is the overall web framework
 from flask import Flask, request
+from werkzeug.urls import url_parse
+
 # joblib is used to unpickle the model
 import joblib
 # json is used to prepare the result
