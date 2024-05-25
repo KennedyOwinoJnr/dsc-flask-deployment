@@ -47,6 +47,7 @@ def index():
         "petal_width": 0.2
     }
     </pre>
+    <p> Feel free to adjust the values of the measurements of the petal and sepal.<p>
     <p>The API will respond with the predicted class of the iris flower.</p>
     """
 
