@@ -31,11 +31,25 @@ def iris_prediction(sepal_length, sepal_width, petal_length, petal_width):
 
     return {"predicted_class": prediction}
 
-# defining routes here
 
+# defining routes here
 @app.route('/', methods=['GET'])
 def index():
-    return 'Test, world!'
+    return """
+    <h1>API Documentation</h1>
+    <p>Welcome to the Iris Prediction API!</p>
+    <p>To make a prediction, send a POST request to the <code>/predict</code> endpoint with the following JSON structure:</p>
+    <pre>
+    {
+        "sepal_length": 5.1,
+        "sepal_width": 3.5,
+        "petal_length": 1.4,
+        "petal_width": 0.2
+    }
+    </pre>
+    <p>The API will respond with the predicted class of the iris flower.</p>
+    """
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
